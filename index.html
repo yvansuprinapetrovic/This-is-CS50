@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block javascript %}
+
+{% endblock %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+   <table>
+       <th>Symbol</th>
+       <th>Name</th>
+       <th>Shares</th>
+       <th>Price</th>
+       <th>TOTAL</th>
+
+       {% for rows in row %}
+       <tr>
+       <td>{{ rows["symbol"] }}</td>
+       <td>{{ rows["name"] }}</td>
+       <td>{{ rows["sum(shares)"] }}</td>
+       <td>{{ "${:,.2f}".format(rows["prices"]) }}</td>
+       <td>{{ "${:,.2f}".format(rows["total"]) }}</td>
+       </tr>
+       {% endfor %}
+
+       <tr>
+           {% for cashs in cash %}
+           <td>Cash</td>
+           <td></td>
+           <td></td>
+           <td class></td>
+           <td class>{{ "${:,.2f}".format(cashs["cash"]) }}</td>
+           {% endfor %}
+       </tr>
+
+       <tr>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td></td>
+           <td>{{ "${:,.2f}".format(grand_total) }}</td>
+       </tr>
+
+   </table>
+{% endblock %}
