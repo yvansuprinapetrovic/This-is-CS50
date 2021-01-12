@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Home</title>
+        <script>
+            function greet()
+            {
+                let name = document.querySelector('#fname').value
+
+                if (name === '')
+                {
+                    alert('Hello, world!')
+                }
+                else
+                {
+                    alert('Hello, '+ name + '!')
+                }
+            }
+        </script>
+    </head>
+    <body>
+
+        <!-- nav bar as a list -->
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="gift.html">Gift</a></li>
+        <li><a href="about.html">About</a></li>
+        </ul>
+
+        <h1>Hello, this is my website.</h1>
+
+        <img src="cat.jpg" alt="Picture of a cat" style="width:400px;height:250px;padding-left:20px">
+
+        <p>Enter your name if you want to be greeted</p>
+
+        <form onsubmit="greet(); return false">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <input type="submit">
+        </form>
+    </body>
+</html>
+
+
