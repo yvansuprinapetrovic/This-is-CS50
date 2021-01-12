@@ -22,3 +22,5 @@ In the homepage I display some basic information about the ISS along some cool p
 which utilizes event listeners and Javascript so to adopt a more dynamic display. It display some trivia and fun facts along some more hardcore facts about the ISS.
 The map web page displays the current location of the ISS as per the coordinates obtained by a call to Open Notify API and dynamically displays a map through Maps
 JavaScript API.
+
+The website is built on a [W3 School](https://www.w3schools.com/w3css/w3css_templates.asp) html template. 
